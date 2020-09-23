@@ -24,6 +24,7 @@
 	- in Player 2 rack
 	- on Board
 	- in Pool
+
 ## Rack
 - ID
 - have tiles 14 tiles at start of game
@@ -139,4 +140,3 @@
 - https://raml.org/
 - http://apiworkbench.com/
 - http://www.blippee.com/game-instructions/instructions-pressman-rummikub.pdf
-- 
