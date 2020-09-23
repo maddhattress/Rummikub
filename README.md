@@ -1,6 +1,6 @@
 # Rummikub Game Design
 
-## Game/Session
+### Game/Session
 - ID
 - Start Date/Time Stamp
 - End Date/Time Stamp
@@ -15,7 +15,7 @@
 	- Completed
 - if State == Completed, have (1) Winner
 
-## Tile
+### Tile
 - ID
 - have (1) color Black, Red, Blue, Orange
 - have (1) number 1-13 or Joker
@@ -25,13 +25,13 @@
 	- on Board
 	- in Pool
 
-## Rack
+### Rack
 - ID
 - have tiles 14 tiles at start of game
 - count of tiles may increase or decrease as game progresses
 - how many tiles are on rack
 
-## Bone Pile/Pool/Bag
+### Bone Pile/Pool/Bag
 - essentially a Rack of all unused tiles
 - finite amount of tiles
 - fixed values for times
@@ -43,20 +43,20 @@
 		- B=Black, O= Orange, R=Red, U=Blue
 		- XX or ZZ=Joker
 
-## Player/Hand
+### Player/Hand
 - ID
 - have (1) rack
 - Take turns/actions
 - have state
 - Did you win or lose?
 
-## States
+### States
 - 1-Taking turn
 	- performing action
 - 0-Waiting to take Turn
 	- can manipulate tiles on rack
 
-## State Changes
+### State Changes
 - Did the board get updated?
 - How many tiles are on your rack?
 - Did you win?
@@ -80,10 +80,10 @@
 - Time Limit (2 minutes) adjustable?
 - First play must be 30 points in one or more groupings
 
-## Winning
+### Winning
 - Player with 0 tiles left in Rack
 
-## Board
+### Board
 - have collections of tiles in VALID Run/Sequences or Set/Groups 
 - huge blank canvas/grid can place tiles where ever (see Jamison's map maker)
 - need to retain previous state before player's turn to undo array
@@ -91,20 +91,20 @@
 - Run validation Checks on all tile collections
 
 
-## Validation Checks
-- Run/Sequence:
+### Validation Checks
+- **Run/Sequence:**
 	- 1 is always played as the lowest number
 	- 13 is always played as the highest number
 	- All tiles in collection are of same color*
 	- Min of  3 tiles 
 	- Max of 13 tiles
 	- tile's value are sequential/consecutive numerically 
-- Set/Group
+- **Set/Group**
 	- Color must be unique within collection
 	- Max of 4 tiles (1 of each color*)
 	- Min of 3 tiles
 	- Tiles within collection must be same value*
-- Jokers
+- **Jokers**
 	- Tile replacing the joker must come from rack, not board
 	- Tile replacing must result in valid Run/Sequence or Set/Group
 	- Joker that has been replaced must be used in same turn with 2 or more tiles from rack.
@@ -134,9 +134,8 @@
 
 
 ## Resources
-- Rules: https://imgv2-1-f.scribdassets.com/img/document/335635268/original/486e258924/1596396259?v=1
-- http://technicalrex.com/2014/09/02/designing-a-rest-api-for-a-turn-based-game
-- https://stackoverflow.com/questions/405588/what-restful-api-would-you-use-for-a-turn-based-game-server
-- https://raml.org/
-- http://apiworkbench.com/
-- http://www.blippee.com/game-instructions/instructions-pressman-rummikub.pdf
+- [http://technicalrex.com/2014/09/02/designing-a-rest-api-for-a-turn-based-game](http://technicalrex.com/2014/09/02/designing-a-rest-api-for-a-turn-based-game)
+- [https://stackoverflow.com/questions/405588/what-restful-api-would-you-use-for-a-turn-based-game-server](https://stackoverflow.com/questions/405588/what-restful-api-would-you-use-for-a-turn-based-game-server)
+- [RAML](https://raml.org/)
+- [API Workbench](http://apiworkbench.com/)
+- [Rummikub Rules](http://www.blippee.com/game-instructions/instructions-pressman-rummikub.pdf)
